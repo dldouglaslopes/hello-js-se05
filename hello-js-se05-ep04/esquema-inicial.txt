@@ -1,0 +1,6 @@
+create table contato(
+	idcontato integer not null primary key autoincrement,
+	nome varchar(255) not null,
+	telefone char(9) not null,
+	datacadastro timestamp not null default current_timestamp
+);

@@ -1,0 +1,21 @@
+create table jogador (
+  idjogador integer not null primary key autoincrement,
+  numerojogador integer not null default 11,
+  nomejogador varchar (255) not null
+);
+
+create table equipe (
+  idequipe integer not null primary key autoincrement,
+  nomeequipe varchar (255) not null
+);
+
+create table escalacao (
+
+  idjogador integer not null unique,
+  idequipe integer not null,
+
+  foreign key (idjogador) references jogador(idjogador)
+  foreign key (idequipe) references equipe(idequipe)
+
+  primary key (idjogador, idequipe)
+);

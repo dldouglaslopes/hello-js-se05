@@ -1,0 +1,35 @@
+insert into jogador (numerojogador,nomejogador) values (10,'Sócrates');
+insert into jogador (numerojogador,nomejogador) values (1,'Arquimedes');
+insert into jogador (numerojogador,nomejogador) values (7,'Aristóteles');
+insert into jogador (numerojogador,nomejogador) values (9,'Platão');
+insert into jogador (numerojogador,nomejogador) values (4,'Heráclito');
+insert into jogador (numerojogador,nomejogador) values (11,'Kant');
+insert into jogador (numerojogador,nomejogador) values (8,'Descartes');
+insert into jogador (numerojogador,nomejogador) values (8,'Nietzsche');
+insert into jogador (numerojogador,nomejogador) values (9,'Schopenhauer');
+insert into jogador (numerojogador,nomejogador) values (5,'Hegel');
+insert into jogador (numerojogador,nomejogador) values (3,'Hume');
+insert into jogador (numerojogador,nomejogador) values (2,'Hobbes');
+insert into jogador (numerojogador,nomejogador) values (7,'Spinoza');
+insert into jogador (numerojogador,nomejogador) values (3,'Heidegger');
+insert into jogador (numerojogador,nomejogador) values (9,'Sêneca');
+
+insert into equipe (nomeequipe) values ('Penso Logo Existo');
+insert into equipe (nomeequipe) values ('Só Sei que Nada Sei');
+insert into equipe (nomeequipe) values ('Vontade de Potência');
+
+insert into escalacao (idjogador,idequipe) values (16,1);
+insert into escalacao (idjogador,idequipe) values (2,1);
+insert into escalacao (idjogador,idequipe) values (3,1);
+insert into escalacao (idjogador,idequipe) values (4,1);
+insert into escalacao (idjogador,idequipe) values (5,1);
+insert into escalacao (idjogador,idequipe) values (6,2);
+insert into escalacao (idjogador,idequipe) values (7,2);
+insert into escalacao (idjogador,idequipe) values (8,2);
+insert into escalacao (idjogador,idequipe) values (9,2);
+insert into escalacao (idjogador,idequipe) values (10,2);
+insert into escalacao (idjogador,idequipe) values (11,3);
+insert into escalacao (idjogador,idequipe) values (12,3);
+insert into escalacao (idjogador,idequipe) values (13,3);
+insert into escalacao (idjogador,idequipe) values (14,3);
+insert into escalacao (idjogador,idequipe) values (15,3);
