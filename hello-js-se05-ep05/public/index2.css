@@ -1,0 +1,15 @@
+h1 {
+    font-size:96px;
+    color: white;
+  }
+
+  
+  .bordado {
+    min-height: 100px;
+    max-width: 300px;
+    color: white;
+  }
+
+  body {
+    background-color: black;
+  }

@@ -1,1 +1,5 @@
 node_modules
+contatos.db 
+/hello-js-se05-ep04/jogador.db
+dev.sqlite3
+migrations
