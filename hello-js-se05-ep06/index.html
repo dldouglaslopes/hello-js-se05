@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>hello-js-se05-ep-06</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <script>
+    const api = axios.create({
+        baseURL:"http://localhost:3000"
+    })
+    window.onload = function() { 
+      new Vue({
+        el:'#app',
+        data:{
+          pessoas:[],
+          pessoa:{ nomepessoa: "",
+                  telefone: "",
+                  datanascimentopessoa: null
+                }
+        },
+        created(){
+          api.get("/listpessoas")
+              .then(ret => {
+                this.pessoas = ret.data
+              })
+        },
+        methods:{
+          dosave(){
+            console.log(this.pessoa)
+            api.post("/addpessoa",
+                    { nomepessoa : this.pessoa.nomepessoa,
+                      telefone : this.pessoa.telefone,
+                      datanascimentopessoa : this.pessoa.datanascimentopessoa
+                    })
+                .then(ret => {
+                  console.log(ret)
+                })
+          }
+        }
+      })
+    }
+  </script>
+  
+  <div id="app">
+    <ul>         
+      <li v-for="pessoa in pessoas">
+        {{ pessoa }}         
+      </li>
+    </ul>
+    <form @submit.prevent="dosave">
+      <fieldset>
+          <p>Nome: </p>
+          <input v-model="pessoa.nomepessoa" placeholder="Nome">  
+          <p>Telefone: </p>
+          <input v-model="pessoa.telefone" placeholder="Telefone">
+          <p>Data de Nascimento: </p>
+          <input v-model="pessoa.datanascimentopessoa" placeholder="Data de nascimento">
+          <input type="submit">
+        </fieldset>
+    </form>
+  </div>
+</body>
+</html>
